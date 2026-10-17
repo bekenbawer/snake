@@ -1,12 +1,33 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snake : deviens gigantesque</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <h1>Snake Game</h1>
-       <p>Welcome to the Snake Game!</p>
-       
+<div class="jeu">
+  <h1>Snake : deviens gigantesque</h1>
+  <div class="hud">
+    <div><small>Score</small><strong id="score">0</strong></div>
+    <div><small>Longueur</small><strong id="longueur">3</strong></div>
+    <div><small>Rang</small><strong id="rang">Petit serpent</strong></div>
+    <div><small>Record</small><strong id="record">0</strong></div>
+  </div>
+  <div class="plateau">
+    <canvas id="jeu" width="576" height="576"></canvas>
+    <div class="voile" id="voile">
+      <h2 id="voileTitre">Prêt à grandir ?</h2>
+      <p id="voileTexte">Mange des pommes : chacune ajoute un anneau à ton serpent.</p>
+      <button id="bouton">Jouer</button>
+    </div>
+  </div>
+  <div class="aide">
+    <span>Flèches / ZQSD / WASD · Espace : pause · Glisser sur mobile</span>
+    <button id="son" aria-pressed="true">Son : oui</button>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

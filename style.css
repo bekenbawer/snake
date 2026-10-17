@@ -1,0 +1,71 @@
+
+  :root {
+    --page: #0f1a1c;
+    --panneau: #162427;
+    --texte: #e6f1ee;
+    --discret: #8fa9a4;
+    --accent: #7be0a4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--page);
+    color: var(--texte);
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  }
+  .jeu { width: min(94vw, 576px); padding: 12px 0; }
+  h1 { margin: 0 0 10px; font-size: 1.5rem; letter-spacing: 0.5px; }
+  .hud {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .hud div { background: var(--panneau); border-radius: 8px; padding: 6px 10px; }
+  .hud small { display: block; color: var(--discret); font-size: 0.75rem; }
+  .hud strong { font-size: 1.1rem; }
+  .plateau { position: relative; }
+  
+  canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--panneau);
+    touch-action: none;
+  }
+  .voile {
+    position: absolute;
+    inset: 3px;
+    display: grid;
+    place-content: center;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(15, 26, 28, 0.82);
+    border-radius: 8px;
+  }
+
+  
+  .voile.cache { display: none; }
+  .voile h2 { margin: 0; font-size: 1.6rem; }
+  .voile p { margin: 0; color: var(--discret); }
+  button {
+    font: inherit;
+    font-weight: bold;
+    padding: 10px 22px;
+    color: #0f1a1c;
+    background: var(--accent);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+
+  button:hover { filter: brightness(1.08); }
+  button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+  .aide { margin: 10px 0 0; font-size: 0.85rem; color: var(--discret); display: flex; justify-content: space-between; gap: 8px; }
+  .aide button { padding: 2px 10px; font-size: 0.8rem; background: var(--panneau); color: var(--texte); }
